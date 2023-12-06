@@ -1,0 +1,17 @@
+<div class="layout-container">
+    <mat-toolbar>
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <h1 class="example-app-name">Album gs</h1>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="sidenav-container">
+        <mat-sidenav #snav mode="over" [fixedInViewport]="false">
+           <mat-nav-list>
+            hola
+           </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            CONTENIDO
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>
