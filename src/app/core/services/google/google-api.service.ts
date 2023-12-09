@@ -8,6 +8,10 @@ const oAuthConfig: AuthConfig = {
   issuer: 'https://accounts.google.com',
   strictDiscoveryDocumentValidation: false,
   redirectUri: window.location.origin,
+  clientId:
+    'youtoken.apps.googleusercontent.com',
+  scope:
+    'openid profile email https://www.googleapis.com/auth/photoslibrary.readonly',
 };
 
 @Injectable({

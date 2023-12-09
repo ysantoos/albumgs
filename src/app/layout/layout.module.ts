@@ -1,8 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material.module';
+import { OAuthModule } from 'angular-oauth2-oidc';
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './components/layout/layout.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FeatureModule } from '../feature/feature.module';
 
 
 @NgModule({
@@ -12,7 +15,10 @@ import { LayoutComponent } from './components/layout/layout.component';
   imports: [
     CommonModule,
     LayoutRoutingModule,
-    MaterialModule
+    HttpClientModule,
+    OAuthModule.forRoot(),
+    MaterialModule,
+    FeatureModule
   ],
   exports: [LayoutComponent]
 })

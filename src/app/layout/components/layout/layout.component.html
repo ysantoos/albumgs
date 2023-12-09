@@ -1,17 +1,29 @@
 <div class="layout-container">
     <mat-toolbar>
         <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
-        <h1 class="example-app-name">Album gs</h1>
+        <h1 class="example-app-name">Albumgs</h1>
     </mat-toolbar>
 
     <mat-sidenav-container class="sidenav-container">
-        <mat-sidenav #snav mode="over" [fixedInViewport]="false">
-           <mat-nav-list>
-            hola
-           </mat-nav-list>
+        <mat-sidenav #snav mode="over" [fixedInViewport]="false" fixedTopGap="56">
+            <mat-nav-list>
+                <div class="profile">
+                    <div class="profile__img" style="background-image: url({{userInfo?.info?.picture}});">
+
+                    </div>
+                    <div class="profile-description">
+                        <b>{{userInfo?.info?.name}}</b>
+                    </div>
+                    <div style="display: flex;justify-content: center;margin-top: 20px;">
+                        <button mat-fab aria-label="Salir" (click)="signOut()">
+                            <mat-icon>logout</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content>
-            CONTENIDO
+            <router-outlet></router-outlet>
         </mat-sidenav-content>
     </mat-sidenav-container>
 </div>
